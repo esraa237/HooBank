@@ -1,0 +1,126 @@
+/* Global variables */
+:root{
+    --background-color: #00040F;
+    --background-image:radial-gradient(64.18% 64.18% at 71.16% 35.69%, #DEF9FA 0.89%, #BEF3F5 17.23%, #9DEDF0 42.04%, #7DE7EB 55.12%, #5CE1E6 71.54%, #33BBCF 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */; 
+}
+/* End Global variables */
+/* Start Global Rules*/
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #00040F;
+    font-family: 'League Spartan', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* small */
+@media(min-width:768px){
+    .container{
+        width:750px;
+    }
+}
+/* meduim */
+@media(min-width:992px){
+    .container{
+        width:970px;
+    }
+}
+/* large */
+@media(min-width:1200px){
+    .container{
+        width:1170px;
+    }
+}
+/* End Global Rules*/
+/* Start header */
+.header{
+    padding:30px;
+}
+.header .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.header img{
+    width:114px;
+}
+.header .links{
+    position: relative;
+}
+@media(max-width:700px){
+    .header .links:hover ul{
+        display: initial;
+    }
+    .header .links .icon{
+        width:30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+    .header .links .icon span{
+        height:3px;
+        margin-bottom: 5px;
+        background-color: rgb(255, 255, 255,80%);
+        width: 100%;
+    }
+    .header .links .icon span:nth-child(1)
+    {
+        width:60%;
+        transition: 0.3s;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -ms-transition: 0.3s;
+        -o-transition: 0.3s;
+}
+    .header .links .icon:hover span:nth-child(1){
+        width:100%;
+    }
+}
+.header ul a {
+    font-size: 16px;
+    color: rgb(255, 255, 255,70%);
+    text-decoration: none;
+    padding-left:56px;
+}
+@media(max-width:700px){
+.header ul{
+    position: absolute;
+    right: 0px;
+    top:calc(100% + 20px);
+    padding:0;
+    margin: 0;
+    min-width: 140px;
+    display: none;
+    z-index: 1;
+    background-color: #dddddd17;
+}
+.header ul::before{
+    content: "";
+    border:10px solid ;
+    position: absolute;
+    top:-20px;
+    right:0px;
+    border-color: transparent transparent #dddddd17 ;
+}
+.header .links ul a {
+    display: block;
+    padding:10px;
+}
+}
+.header .links a:first-of-type {
+    color:white;
+}
+
+/* End header */
