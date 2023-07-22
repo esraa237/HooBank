@@ -12,8 +12,11 @@
 }
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 body{
+    max-width: 100%;
+    overflow-x: hidden;
     background-color: #00040F;
     font-family: 'League Spartan', sans-serif;
     font-family: 'Poppins', sans-serif;
@@ -45,7 +48,7 @@ body{
 /* End Global Rules*/
 /* Start header */
 .header{
-    padding:30px;
+    padding:30px 30px 65px;
 }
 .header .container{
     display: flex;
@@ -122,5 +125,101 @@ body{
 .header .links a:first-of-type {
     color:white;
 }
-
 /* End header */
+/* Start landing */
+.landing .container{
+    display: flex;
+    position: relative;
+}
+@media(max-width:992px){
+    .landing .container{
+        flex-direction: column-reverse;
+    }   
+}
+.landing .text{
+    flex-basis: 69%;
+}
+.landing .text .header{
+    margin-top: 122px;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    width:fit-content;
+    height: 40px;
+    padding: 4px 18px 4px 10px;
+    border-radius: 10px;
+    background: linear-gradient(125.17deg, #272727 0%, #11101D 100%);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.6);
+}
+.landing .text .header img{
+    width: 32px;
+    margin-right: 13px;
+}
+.landing .header p span{
+    color: white;
+}
+.landing .info{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 5px 0;
+}
+.landing .info h2{
+    line-height: 100.8px;
+   font-size: 70px; 
+   color: white;
+   margin: 25px 0 40px;
+}
+.landing .info h2 span{
+    background: radial-gradient(64.18% 64.18% at 71.16% 35.69%, #DEF9FA 0.89%, #BEF3F5 17.23%, #9DEDF0 42.04%, #7DE7EB 55.12%, #5CE1E6 71.54%, #33BBCF 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.landing .info img{
+    position: absolute;
+    top:30px;
+    right:13rem;
+}
+.landing .info p{
+    font-size: 18px;
+    color:rgba(255, 255, 255, 0.7);
+    max-width: 483px;
+    line-height: 30.6px;
+    margin:0;
+
+}
+.landing .image{
+    width:640px;
+   height: 674px;
+   position: absolute;
+   top:0;
+   left:58%;
+}
+/* small
+@media(min-width:768px){
+    .landing .image{
+        left: 400px;
+    }
+}
+ meduim 
+@media(min-width:992px){
+    .landing .image{
+        left:580px;
+    }
+}5
+ large 
+@media(min-width:1200px){
+    .landing .image{
+        left:750px;
+    }
+} */
+.landing .image img{
+    width:100%;
+    
+}
+/* End landing */
